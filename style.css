@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+@font-face {
+    font-family: "InterExtraBold";
+    src: url(/static/Inter-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: "InterBold";
+    src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --main-font: 'Inter', sans-serif;
+    --dark-blue: hsl(240, 100%, 5%);
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+}
+
+body{
+    margin: 80px 10%;
+
+}
+
+.navbar {
+    display:  flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    font-family: var(--main-font);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    margin-left: calc(10px + 2vw);
+    color: black;
+}
+
+nav ul li a:hover{
+    color: var(--soft-orange);
+}
+
+nav ul li a:active{
+    color: var(--soft-red);
+}
+
+.navbar .hamburger-menu div{
+    width: 50px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    display: none;
+}
+
+
+.main-img{
+    background: url(/assets/images/image-web-3-desktop.jpg) no-repeat
+    center center/cover;
+    height: 50vh;
+    width: 100%;
+    grid-column: 1/3;
+}
+
+.aside-box{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    color: white;
+    grid-row: 1/3;
+    grid-column: 3/4;
+    padding: 30px;
+    font-family: var(--main-font)
+}
+
+.aside-box h2{
+    color: var(--soft-orange);
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.aside-box div{
+    flex-direction: column;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.aside-box div h3{
+    font-size: 22px;
+}
+
+.aside-box div p{
+    opacity: 0.7;
+}
+
+.aside-box div:last-child{
+    border-bottom: 0 !important;
+}
+
+.aside-box div h3,
+.aside-box div p{
+padding-bottom: 10px;
+line-height: 25px;
+
+}
+.aside-box div h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+.aside-box div h3 a:hover{
+    color: var(--soft-orange);
+}
+
+.content-field{
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(3, 1fr);
+    gap: 30px
+}
+
+.bottom-row{
+    display: flex;
+}
+
+.article-title{
+    font-size: calc(22px + 1vw);
+    font-family: "InterExtraBold" !important;
+}
+
+.article p{
+    padding-bottom: 40px;
+    line-height: 25px;
+    font-family: var(--main-font) ;
+}
+
+.article button{
+    background-color: var( --soft-red);
+    border: 0;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    color: white;
+    font-family: "InterBold";
+}
+
+.article button:hover{
+    background-color: var(--dark-blue);
+}
+
+.article button:active{
+    background-color: var(--soft-red);
+}
+
+.bottom-row span{
+    font-size: 2rem;
+    font-weight: bolder;
+    opacity: 0.3;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.bottom-row{
+    margin-top: 50px;
+    font-family: var(--main-font)
+}
+
+.bottom-row .info-box{
+    padding-left: 20px;
+}
+
+.bottom-row .info-box h3{
+    padding-bottom: 10px;
+    font-family: "InterExtraBold" !important;
+}
+
+.bottom-row .info-box p{
+    line-height: 30px;
+}
+
+.bottom-row .info-box h3 a{
+ text-decoration: none;
+ color: var(--dark-blue);
+}
+
+.bottom-row .info-box h3 a:hover{
+    color: var(--soft-red);
+}
+
+.bottom-row img{
+    width: calc(70px + 3vw);
+}
+
+
+@media only screen and (max-width: 375px){
+    nav ul{
+        flex-direction: column;
+        display: flex;
+    }
+    .navbar div .hamburger-menu div{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+
+    .navbar{
+        padding-bottom: 30px;
+    }
+
+
+    body{
+        margin: 30px 15px;
+    }
+    .content-field {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .main-img{
+        width: 100%;
+        height: 35vh;
+    }
+
+    .content-field{
+        display: flex;
+
+    }
+
+    .aside-box{
+        order: 2;
+    }
+
+    .bottom-row{
+        order: 3;
+    }
+
+    .bottom-row img{
+        height: 100%;
+    }
+
+    .bottom-row .info-box p{
+        font-size: calc(10px + 1vw);
+    }
+
+
+
+
+}
