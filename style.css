@@ -26,7 +26,6 @@
 
 body{
     margin: 80px 10%;
-
 }
 
 .navbar {
@@ -203,13 +202,15 @@ line-height: 25px;
 }
 
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 600px){
     nav ul{
         flex-direction: column;
         display: flex;
     }
     .navbar div .hamburger-menu div{
         display: block;
+        z-index: 10;
+        position: relative;
     }
     nav ul{
         display: none;
@@ -218,8 +219,25 @@ line-height: 25px;
     .navbar{
         padding-bottom: 30px;
     }
-
-
+    nav{
+        height: 100vh;
+        position: absolute;
+        background-color: white;
+        width: 350px;
+        right: 0;
+        top: 0;
+        display: none;
+        border-left: 1px dotted black;
+    }
+    nav .nav-elements{
+        position: absolute;
+        right: 180px;
+        top: 180px;
+        font-size: 1.5em;
+    }
+    nav .nav-elements li{
+        margin-bottom: 40px;
+    }
     body{
         margin: 30px 15px;
     }
