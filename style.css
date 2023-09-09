@@ -65,7 +65,7 @@ nav ul li a:active{
 
 
 .main-img{
-    background: url(/assets/images/image-web-3-desktop.jpg) no-repeat
+    background: url(assets/images/image-web-3-desktop.jpg) no-repeat
     center center/cover;
     height: 50vh;
     width: 100%;
