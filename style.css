@@ -202,7 +202,7 @@ line-height: 25px;
 }
 
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 480px){
     nav ul{
         flex-direction: column;
         display: flex;
